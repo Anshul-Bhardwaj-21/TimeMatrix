@@ -13,30 +13,24 @@ export default function TabLayout() {
   const colorScheme = useColorScheme();
   const { user } = useAuth();
 
-  // Hide tabs when user is not authenticated
-  if (!user) {
-    return (
-      <Tabs screenOptions={{ headerShown: false, tabBarStyle: { display: 'none' } }}>
-        <Tabs.Screen name="index" />
-        <Tabs.Screen name="explore" />
-      </Tabs>
-    );
-  }
+  const tabBarStyle = !user 
+    ? { display: 'none' as const }
+    : Platform.select({
+        ios: {
+          // Use a transparent background on iOS to show the blur effect
+          position: 'absolute' as const,
+        },
+        default: {},
+      });
 
   return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
+        tabBarButton: user ? HapticTab : undefined,
+        tabBarBackground: user ? TabBarBackground : undefined,
+        tabBarStyle,
       }}>
       <Tabs.Screen
         name="index"

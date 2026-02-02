@@ -5,12 +5,12 @@ import { getFirestore } from 'firebase/firestore';
 // Firebase configuration
 // You can either use environment variables or replace with your actual Firebase config
 const firebaseConfig = {
-  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY || "your-api-key",
-  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN || "your-project.firebaseapp.com",
-  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID || "your-project-id",
-  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET || "your-project.appspot.com",
-  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "123456789",
-  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID || "your-app-id"
+  apiKey: "AIzaSyBUPcNlHfI7CD63Q8T9dQ6M34-OKFmc4L4",
+  authDomain: "weekmatrix.firebaseapp.com",
+  projectId: "weekmatrix",
+  storageBucket: "weekmatrix.firebasestorage.app",
+  messagingSenderId: "541264842906",
+  appId: "1:541264842906:web:edce8eb9badd973b938f23"
 };
 
 // Initialize Firebase

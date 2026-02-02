@@ -2,6 +2,10 @@
 
 A personal weekly task matrix app that helps you track daily progress across tasks, synced across devices using Firebase.
 
+## Security
+
+✅ **WeekMatrix is NOT affected by recent React security advisories** (CVE-2025-55182, etc.) because we use React Native (client-side only), not React Server Components. See [SECURITY.md](./SECURITY.md) for details.
+
 ## Features
 
 - **Weekly Task Matrix**: Visual grid showing tasks vs. days of the week
