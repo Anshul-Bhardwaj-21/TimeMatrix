@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "", // Project Id
   storageBucket: "", // Storage Bucket
   messagingSenderId: "", // Messaging Sender Id
-  appId: "", // App Is
+  appId: "", // App Id
 };
 
 // Initialize Firebase
